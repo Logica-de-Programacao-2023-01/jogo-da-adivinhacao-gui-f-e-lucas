@@ -7,16 +7,19 @@ import (
 )
 
 func main() {
+	// criação de uma vairavel booleana para gerar condição no laço for
 	fmt.Println("Bem vindo ao jogo da adivinhação!")
 	pedirJoogar := true
 	var todasTentativas [][]int
 
 	for pedirJoogar {
+		//primeiro loop para criação de um numero aleatorio e repetição das condições básicas do game
 		respoosta := numAleatorio()
 		tentativas := make([]int, 0)
 		encontrou := false
 
 		for !encontrou {
+			//loop para encontrar a resposta, caso a variavel "encontrou" seja verdadeira, o loop termina
 			chute := numUsuario()
 			tentativas = append(tentativas, chute)
 
@@ -61,5 +64,6 @@ func pedirParaJoogar() bool { //pede para joogar novamente
 	fmt.Println("Você deseja jogar novamente? (s/n):")
 	fmt.Scanln(&pedir)
 
+	//retorna true caso escreva "s", caso o cntrario, retorna falso
 	return pedir == "s" || pedir == "S"
 }
