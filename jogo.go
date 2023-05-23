@@ -43,7 +43,7 @@ func main() {
 	fmt.Println("\nHistórico de tentativas:")
 
 	for x, tentativas := range todasTentativas {
-		fmt.Printf("Jogada : %d  -  Tentativas: %d\n ", x+1, tentativas)
+		fmt.Printf("Jogada : %d  -  Tentativas: %d\n ", x+1, len(tentativas))
 	}
 }
 
